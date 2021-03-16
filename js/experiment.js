@@ -1,3 +1,6 @@
+// Connect socket.
+let socket = io.connect('http://localhost:70'); // TODO
+
 // Get participant number from Prolific somehow.
 let subjectNo = 0;
 
@@ -51,13 +54,16 @@ var welcome = {
           "Components that are 'fused' make a sound that we hear as coming from one source. For example, the sound of a violin is made up of many 'fused' components, but we hear it as one source.",
           "Components that are 'not fused' make a sound that seems cloudy, or coming from multiple sources at once. It seems to break apart.",
           "To help remind you of their meaning, the scale has additional labels in brackets: 'less fused (<em>more sources</em>)' and 'more fused (<em>less sources</em>).'",
-          "This short experiment takes place over four blocks. In each block you will hear and then rate 16 sounds.",
+          "This short experiment takes place over four blocks. In each block you will hear and then rate 18 sounds.",
           "Drag the slider to indicate your desired response, then click 'Continue' to move on to the next trial.",
           "At the end of the last block, you will be redirected to Prolific.",
           "Thank you for your participation.",
   ],
   show_clickable_nav: true
 };
+
+// TODO volume block.
+// TODO practice block.
 
 var captionBlock0 = {
   type: 'instructions',
@@ -163,25 +169,39 @@ var block3 = {
 var timeline = [];
 timeline.push(preload);
 timeline.push(introduction);
-timeline.push(informedConsent);
-timeline.push(welcome);
+// timeline.push(informedConsent);
+// timeline.push(welcome);
 
 timeline.push(captionBlock0);
 timeline.push(block0);
-timeline.push(captionBlock1);
-timeline.push(block1);
-timeline.push(captionBlock2);
-timeline.push(block2);
-timeline.push(captionBlock3);
-timeline.push(block3);
+// timeline.push(captionBlock1);
+// timeline.push(block1);
+// timeline.push(captionBlock2);
+// timeline.push(block2);
+// timeline.push(captionBlock3);
+// timeline.push(block3);
 
 
 // Function that runs the experiment.
 function startExp(){
   jsPsych.init({
     timeline: timeline,
-    on_finish: function() {
-    jsPsych.data.displayData();
-    }
+      on_finish: function () {
+          // Send over sockets.       
+          var filename = `subject_${subjectNo}.csv`;
+          // var expData = jsPsych.data.get().ignore(['view_history', 'responses', 'internal_node_id', 'key_press', 'accuracy', 'event']).csv();
+          var expData = jsPsych.data.get().csv();
+
+          // Send to server, and download data.
+          socket.emit('csv', {filename: filename, expData: expData}, function(confirmation){ 
+            console.log(confirmation);
+            window.location = "https://www.google.com"; // TODO
+          });
+
+
+      }
+    // on_finish: function() {
+    // jsPsych.data.displayData();
+    // }
   });
 }
