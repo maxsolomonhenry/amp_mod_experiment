@@ -30,3 +30,15 @@ function getTimelineVars (subjectNo, blockNo, repeats, asJSON)
   
   return out; 
 }
+
+function check_consent (elem) 
+{
+  if (document.getElementById('consent_checkbox').checked) {
+    return true;
+  }
+  else {
+    alert("If you wish to participate, you must check the box next to the statement 'I agree to participate in this study.'");
+    return false;
+  }
+  return false;
+}
