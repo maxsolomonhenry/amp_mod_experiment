@@ -1,5 +1,6 @@
 // Connect socket.
-let socket = io.connect('http://localhost:70'); // TODO
+// let socket = io.connect('http://localhost:70'); // TODO
+let socket = io();
 
 // Get participant number from Prolific somehow.
 let subjectNo = 0;
