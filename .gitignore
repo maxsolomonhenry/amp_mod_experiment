@@ -1,5 +1,7 @@
 .DS_Store
 
 *.wav
+*.csv
 
+data/*
 audio/**/
