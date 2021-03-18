@@ -19,9 +19,17 @@ var io = socket(server);
 io.on('connection', newConnection);
 
 var datapath = 'data/';
+var subjectCount = 0;
 
 function newConnection(socket){
     console.log('new connection: ' + socket.id);
+
+    socket.on('requestSubjectNo', (data, callback) => {
+
+        console.log(`Request for new subject number. They say ${data}. I say ${subjectCount}.`);
+        callback(subjectCount++);
+
+    });
 
     socket.on('csv', (data, callback) => {
     	fs.writeFile(datapath + data.filename, data.expData, err => {
