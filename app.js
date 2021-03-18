@@ -9,8 +9,8 @@ var app = express();
 // Set static folder.
 app.use(express.static(__dirname));
 
-// const PORT = process.env.PORT || 70;
-var server = app.listen(70, '0.0.0.0', () => console.log(`Server started on port: 70`));
+// const PORT = process.env.PORT || 80;
+var server = app.listen(80, '0.0.0.0', () => console.log(`Server started on port: 80`));
 var socket = require('socket.io');
 var io = socket(server);
 

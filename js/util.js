@@ -1,14 +1,16 @@
 /* Utils */
 
+// Build audio stimulus list from scratch.
 function getTimelineVars (subjectNo, blockNo, repeats, asJSON) 
 {
-  // Build audio stimulus list from scratch.
   let out = [];
   
   let types = [
     'BASIC',
     'CONTROL',
+    'FM_ONLY',
     'FROZEN',
+    'PAM',
     'RAG',
     'RAG_RAF',
     'SHUFFLE',
@@ -31,8 +33,9 @@ function getTimelineVars (subjectNo, blockNo, repeats, asJSON)
   return out; 
 }
 
-function check_consent (elem) 
-{
+
+// Checking consent from consent form.
+function check_consent(elem) {
   if (document.getElementById('consent_checkbox').checked) {
     return true;
   }
@@ -41,4 +44,5 @@ function check_consent (elem)
     return false;
   }
   return false;
-}
+};
+
