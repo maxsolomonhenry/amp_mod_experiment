@@ -1,5 +1,10 @@
 .DS_Store
 
 *.wav
+*.csv
 
+ngrok_reminder.txt
+ngrok
+
+data/*
 audio/**/
