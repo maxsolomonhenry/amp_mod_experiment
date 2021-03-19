@@ -40,7 +40,7 @@ function check_consent(elem) {
     return true;
   }
   else {
-    alert("If you wish to participate, you must check the box next to the statement 'I agree to participate in this study.'");
+    alert("If you wish to participate, you must check the box next to the statement 'I agree to take part in this study.'");
     return false;
   }
   return false;
