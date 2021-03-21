@@ -95,209 +95,209 @@ init().then((studyType) => {
     var timeline = [];
 
 
-    // var welcome = {
-    //   type: "instructions",
-    //   pages: [
-    //     '<h3>Welcome!</h3> ' +
-    //     'We are investigating the perception of musical vibrato. ' +
-    //     'Before we begin, we need to know if you are the right participant for this experiment.',
-    //     '<h3>Are you the right participant for us?</h3>' +
-    //     'Anyone can participate in this experiment so long as they have normal hearing.',
-    //     '<h3>Please ensure you have the following before participating:</h3>' +
-    //     '<ul><li>You are currently using a laptop or desktop computer and not using a mobile device.</li>'+
-    //     '<li>You are using a current web browser with Javascript enabled (Chrome/Firefox are preferred).</li>'+
-    //     '<li>You have a set of headphones to use during the experiment (do not use your speakers).</li>'+
-    //     '<li>You are participating in a quiet environment with very little background noise.</li></ul><br><br>' +
-    //     'If you have ensured the above and would like to participate in the study, please proceed to the informed consent form.'
-    //   ],
-    //   show_clickable_nav: true
-    // };
-    // timeline.push(welcome);
+    var welcome = {
+      type: "instructions",
+      pages: [
+        '<h3>Welcome!</h3> ' +
+        'We are investigating the perception of musical vibrato. ' +
+        'Before we begin, we need to know if you are the right participant for this experiment.',
+        '<h3>Are you the right participant for us?</h3>' +
+        'Anyone can participate in this experiment so long as they have normal hearing.',
+        '<h3>Please ensure you have the following before participating:</h3>' +
+        '<ul><li>You are currently using a laptop or desktop computer and not using a mobile device.</li>'+
+        '<li>You are using a current web browser with Javascript enabled (Chrome/Firefox are preferred).</li>'+
+        '<li>You have a set of headphones to use during the experiment (do not use your speakers).</li>'+
+        '<li>You are participating in a quiet environment with very little background noise.</li></ul><br><br>' +
+        'If you have ensured the above and would like to participate in the study, please proceed to the informed consent form.'
+      ],
+      show_clickable_nav: true
+    };
+    timeline.push(welcome);
 
 
-    // var consent = {
-    //   type:'external-html',
-    //   url: "consent.html",
-    //   cont_btn: "start",
-    //   check_fn: check_consent
-    // };
-    // timeline.push(consent);
+    var consent = {
+      type:'external-html',
+      url: "consent.html",
+      cont_btn: "start",
+      check_fn: check_consent
+    };
+    timeline.push(consent);
 
 
-    // var volumeInstructions = {
-    //   type: "instructions",
-    //   pages: [
-    //     '<h3>Setting your system volume</h3>' +
-    //     'You will now hear six sounds that are typical of the sounds in this experiment. ' +
-    //     'They have been pre-adjusted to be approximately the same loudness.',
-    //     'As you listen to the sounds, adjust your system volume so that they are playing back to you at a comfortable level.',
-    //     'After you have set your volume, please <b> do not adjust your system volume for the rest of the experiment </b>.',
-    //     'Click Next to start listening.'
-    //   ],
-    //   show_clickable_nav: true
-    // };
-    // timeline.push(volumeInstructions);
+    var volumeInstructions = {
+      type: "instructions",
+      pages: [
+        '<h3>Setting your system volume</h3>' +
+        'You will now hear six sounds that are typical of the sounds in this experiment. ' +
+        'They have been pre-adjusted to be approximately the same loudness.',
+        'As you listen to the sounds, adjust your system volume so that they are playing back to you at a comfortable level.',
+        'After you have set your volume, please <b> do not adjust your system volume for the rest of the experiment </b>.',
+        'Click Next to start listening.'
+      ],
+      show_clickable_nav: true
+    };
+    timeline.push(volumeInstructions);
 
 
-    // var volumeBlock = {
-    //   type: 'audio-button-response',
-    //   choices: ['Continue'],
-    //   timeline: [
-    //     {stimulus: 'audio/MISC/vol1.wav', prompt: '<p><b>Playing sound 1/6.</b> Please adjust your volume as needed.</p>'},
-    //     {stimulus: 'audio/MISC/vol2.wav', prompt: '<p><b>Playing sound 2/6.</b> Please adjust your volume as needed.</p>'},
-    //     {stimulus: 'audio/MISC/vol3.wav', prompt: '<p><b>Playing sound 3/6.</b> Please adjust your volume as needed.</p>'},
-    //     {stimulus: 'audio/MISC/vol4.wav', prompt: '<p><b>Playing sound 4/6.</b> Please adjust your volume as needed.</p>'},
-    //     {stimulus: 'audio/MISC/vol5.wav', prompt: '<p><b>Playing sound 5/6.</b> Please adjust your volume as needed.</p>'},
-    //     {stimulus: 'audio/MISC/vol6.wav', prompt: '<p><b>Playing sound 6/6.</b> Please adjust your volume as needed.</p>'},
-    //   ]
-    // };
-    // timeline.push(volumeBlock);
+    var volumeBlock = {
+      type: 'audio-button-response',
+      choices: ['Continue'],
+      timeline: [
+        {stimulus: 'audio/MISC/vol1.wav', prompt: '<p><b>Playing sound 1/6.</b> Please adjust your volume as needed.</p>'},
+        {stimulus: 'audio/MISC/vol2.wav', prompt: '<p><b>Playing sound 2/6.</b> Please adjust your volume as needed.</p>'},
+        {stimulus: 'audio/MISC/vol3.wav', prompt: '<p><b>Playing sound 3/6.</b> Please adjust your volume as needed.</p>'},
+        {stimulus: 'audio/MISC/vol4.wav', prompt: '<p><b>Playing sound 4/6.</b> Please adjust your volume as needed.</p>'},
+        {stimulus: 'audio/MISC/vol5.wav', prompt: '<p><b>Playing sound 5/6.</b> Please adjust your volume as needed.</p>'},
+        {stimulus: 'audio/MISC/vol6.wav', prompt: '<p><b>Playing sound 6/6.</b> Please adjust your volume as needed.</p>'},
+      ]
+    };
+    timeline.push(volumeBlock);
 
 
-    // if (studyType == 0) {
-    //   // FUSION EXPERIMENT.
-    //   var instructions = {
-    //     type: "instructions",
-    //     pages: [
-    //       "Thank you.",
-    //       "In this experiment you will rate a series of short sounds, one at a time. " +
-    //       "You will rate each sound on a scale from <b>less fused</b> to <b>more fused</b>.",
-    //       "<h3>What does fused mean?</h3>" +
-    //       "All sound is made up of many simple components. Oftentimes they seem to be 'fused' together. ",
-    //       "<p>Components that are <b>fused</b> make a sound that we hear as coming from one source.</p> " +
-    //       "<p>For example, the sound of a violin is made up of many <b>fused</b> components, but we hear it as one source.</p>",
-    //       "Components that are <b>not fused</b> make a sound that seems cloudy, or coming from multiple sources at once.",
-    //       "<p>To help remind you of their meaning, the scale has additional labels in brackets: </p>" +
-    //       "<p><b>less fused (more sources)</b> and <b>more fused (less sources)</b>.</p>",
-    //       "This short experiment takes place over two blocks. In each block you will hear and then rate 44 short sounds. ",
-    //       "Drag the slider to indicate your desired response. It can be placed at any point between the two extremes. ",
-    //       "You must click on the slider at least once to record your answer. When you are done, click 'Continue' to move on to the next trial.",
-    //       "We will now proceed to the practice block.",
-    //     ],
-    //     show_clickable_nav: true
-    //   };
-    // } else if (studyType ==1 ) {
-    //   // REALISM EXPERIMENT.
-    //   var instructions = {
-    //     type: "instructions",
-    //     pages: [
-    //       "Thank you.",
-    //       "In this experiment you will rate a series of short sounds, one at a time. " +
-    //       "For each sound you will rate the perceived vibrato on a scale from <b>not realistic at all</b> to <b>very realistic</b>.",
-    //       "<h3>What is vibrato?</h3>" +
-    //       "Vibrato is a smooth, cyclic variation of sound that performers use to add expression to musical notes. ",
-    //       "<p>Opera singers are well-known for their wide pitch vibrato.</p> " +
-    //       "<p>However, vibrato does not have to be a variation of pitch. Some kinds of instrument vibrato have very little change in pitch at all.</p>",
-    //       "<p>You are about to hear sounds that have varying kinds of 'cyclic change.'</p>" +
-    //       "<p>We want to know which kinds of change sound like vibrato to you.</p>",
-    //       "To help remind you of the task, the scale has the following labels: " +
-    //       "<p><b>not realistic at all</b> to <b>very realistic</b>.</p>",
-    //       "Drag the slider to indicate your desired response. It can be placed at any point between the two extremes. ",
-    //       "You must click on the slider at least once to record your answer. When you are done, click 'Continue' to move on to the next trial.",
-    //       "This short experiment takes place over two blocks. In each block you will hear and then rate 44 short sounds. ",
-    //       "We will now proceed to the practice block.",
-    //     ],
-    //     show_clickable_nav: true
-    //   };
-    // }
+    if (studyType == 0) {
+      // FUSION EXPERIMENT.
+      var instructions = {
+        type: "instructions",
+        pages: [
+          "Thank you.",
+          "In this experiment you will rate a series of short sounds, one at a time. " +
+          "You will rate each sound on a scale from <b>less fused</b> to <b>more fused</b>.",
+          "<h3>What does fused mean?</h3>" +
+          "All sound is made up of many simple components. Oftentimes they seem to be 'fused' together. ",
+          "<p>Components that are <b>fused</b> make a sound that we hear as coming from one source.</p> " +
+          "<p>For example, the sound of a violin is made up of many <b>fused</b> components, but we hear it as one source.</p>",
+          "Components that are <b>not fused</b> make a sound that seems cloudy, or coming from multiple sources at once.",
+          "<p>To help remind you of their meaning, the scale has additional labels in brackets: </p>" +
+          "<p><b>less fused (more sources)</b> and <b>more fused (less sources)</b>.</p>",
+          "This short experiment takes place over two blocks. In each block you will hear and then rate 44 short sounds. ",
+          "Drag the slider to indicate your desired response. It can be placed at any point between the two extremes. ",
+          "You must click on the slider at least once to record your answer. When you are done, click 'Continue' to move on to the next trial.",
+          "We will now proceed to the practice block.",
+        ],
+        show_clickable_nav: true
+      };
+    } else if (studyType ==1 ) {
+      // REALISM EXPERIMENT.
+      var instructions = {
+        type: "instructions",
+        pages: [
+          "Thank you.",
+          "In this experiment you will rate a series of short sounds, one at a time. " +
+          "For each sound you will rate the perceived vibrato on a scale from <b>not realistic at all</b> to <b>very realistic</b>.",
+          "<h3>What is vibrato?</h3>" +
+          "Vibrato is a smooth, cyclic variation of sound that performers use to add expression to musical notes. ",
+          "<p>Opera singers are well-known for their wide pitch vibrato.</p> " +
+          "<p>However, vibrato does not have to be a variation of pitch. Some kinds of instrument vibrato have very little change in pitch at all.</p>",
+          "<p>You are about to hear sounds that have varying kinds of 'cyclic change.'</p>" +
+          "<p>We want to know which kinds of change sound like vibrato to you.</p>",
+          "To help remind you of the task, the scale has the following labels: " +
+          "<p><b>not realistic at all</b> to <b>very realistic</b>.</p>",
+          "Drag the slider to indicate your desired response. It can be placed at any point between the two extremes. ",
+          "You must click on the slider at least once to record your answer. When you are done, click 'Continue' to move on to the next trial.",
+          "This short experiment takes place over two blocks. In each block you will hear and then rate 44 short sounds. ",
+          "We will now proceed to the practice block.",
+        ],
+        show_clickable_nav: true
+      };
+    }
     
-    // timeline.push(instructions);
+    timeline.push(instructions);
 
 
-    // var practiceBlock = {    
-    //   type: "audio-slider-response",
-    //   labels: trialLabels[studyType],
-    //   min: 0,
-    //   max: Number.MAX_SAFE_INTEGER,
-    //   slider_start: Math.floor( Number.MAX_SAFE_INTEGER / 2 ),
-    //   step: 1,
-    //   slider_width: 500,       // (in pixels).
-    //   require_movement: true,
-    //   prompt: trialPrompts[studyType],
-    //   timeline: [
-    //     {stimulus: 'audio/MISC/train1.wav'},
-    //     {stimulus: 'audio/MISC/train2.wav'}
-    //   ]
-    // };
-    // timeline.push(practiceBlock);
+    var practiceBlock = {    
+      type: "audio-slider-response",
+      labels: trialLabels[studyType],
+      min: 0,
+      max: Number.MAX_SAFE_INTEGER,
+      slider_start: Math.floor( Number.MAX_SAFE_INTEGER / 2 ),
+      step: 1,
+      slider_width: 500,       // (in pixels).
+      require_movement: true,
+      prompt: trialPrompts[studyType],
+      timeline: [
+        {stimulus: 'audio/MISC/train1.wav'},
+        {stimulus: 'audio/MISC/train2.wav'}
+      ]
+    };
+    timeline.push(practiceBlock);
 
 
-    // var preMain = {
-    //   type: "instructions",
-    //   pages: [
-    //     "We will now proceed to the main experiment.",
-    //     "At the end of the last block, you will be redirected to Prolific.",
-    //     "Thank you for your participation."
-    //   ],
-    //   show_clickable_nav: true
-    // };
-    // timeline.push(preMain);
+    var preMain = {
+      type: "instructions",
+      pages: [
+        "We will now proceed to the main experiment.",
+        "At the end of the last block, you will be redirected to Prolific.",
+        "Thank you for your participation."
+      ],
+      show_clickable_nav: true
+    };
+    timeline.push(preMain);
 
 
-    // var captionBlock0 = {
-    //   type: 'instructions',
-    //   pages: ['<b>Block 1/2.</b>'],
-    //   show_clickable_nav: true,
-    // };
-    // timeline.push(captionBlock0);
+    var captionBlock0 = {
+      type: 'instructions',
+      pages: ['<b>Block 1/2.</b>'],
+      show_clickable_nav: true,
+    };
+    timeline.push(captionBlock0);
 
 
-    // var block0 = {
-    //   timeline: [
-    //     {
-    //       type: "audio-slider-response",
-    //       labels: trialLabels[studyType],
-    //       stimulus: jsPsych.timelineVariable('stimulus'),
-    //       min: 0,
-    //       max: Number.MAX_SAFE_INTEGER,
-    //       slider_start: Math.floor( Number.MAX_SAFE_INTEGER / 2 ),
-    //       step: 1,
-    //       slider_width: 500,
-    //       require_movement: true,
-    //       prompt: trialPrompts[studyType],
-    //     }
-    //   ],
-    //   timeline_variables: getTimelineVars(subjectNo, 0, 4, true),
-    //   randomize_order: true,
-    // };
-    // timeline.push(block0);
+    var block0 = {
+      timeline: [
+        {
+          type: "audio-slider-response",
+          labels: trialLabels[studyType],
+          stimulus: jsPsych.timelineVariable('stimulus'),
+          min: 0,
+          max: Number.MAX_SAFE_INTEGER,
+          slider_start: Math.floor( Number.MAX_SAFE_INTEGER / 2 ),
+          step: 1,
+          slider_width: 500,
+          require_movement: true,
+          prompt: trialPrompts[studyType],
+        }
+      ],
+      timeline_variables: getTimelineVars(subjectNo, 0, 4, true),
+      randomize_order: true,
+    };
+    timeline.push(block0);
 
 
-    // var captionBreak = {
-    //   type: 'instructions',
-    //   pages: ['<p><b>Halfway complete</b>.</p> <p>You may take a two-minute break here if you wish. Click on the button to continue.</p>'],
-    //   show_clickable_nav: true,
-    // };
-    // timeline.push(captionBreak);
+    var captionBreak = {
+      type: 'instructions',
+      pages: ['<p><b>Halfway complete</b>.</p> <p>You may take a two-minute break here if you wish. Click on the button to continue.</p>'],
+      show_clickable_nav: true,
+    };
+    timeline.push(captionBreak);
 
 
-    // var captionBlock1 = {
-    //   type: 'instructions',
-    //   pages: ['<b>Block 2/2</b>.'],
-    //   show_clickable_nav: true,
-    // };
-    // timeline.push(captionBlock1);
+    var captionBlock1 = {
+      type: 'instructions',
+      pages: ['<b>Block 2/2</b>.'],
+      show_clickable_nav: true,
+    };
+    timeline.push(captionBlock1);
 
 
-    // var block1 = {
-    //   timeline: [
-    //     {
-    //       type: "audio-slider-response",
-    //       labels: trialLabels[studyType],
-    //       stimulus: jsPsych.timelineVariable('stimulus'),
-    //       min: 0,
-    //       max: Number.MAX_SAFE_INTEGER,
-    //       slider_start: Math.floor( Number.MAX_SAFE_INTEGER / 2 ),
-    //       step: 1,
-    //       slider_width: 500,       // (in pixels).
-    //       require_movement: true,
-    //       prompt: trialPrompts[studyType],
-    //     }
-    //   ],
-    //   timeline_variables: getTimelineVars(subjectNo, 1, 4, true),
-    //   randomize_order: true,
-    // }
-    // timeline.push(block1);
+    var block1 = {
+      timeline: [
+        {
+          type: "audio-slider-response",
+          labels: trialLabels[studyType],
+          stimulus: jsPsych.timelineVariable('stimulus'),
+          min: 0,
+          max: Number.MAX_SAFE_INTEGER,
+          slider_start: Math.floor( Number.MAX_SAFE_INTEGER / 2 ),
+          step: 1,
+          slider_width: 500,       // (in pixels).
+          require_movement: true,
+          prompt: trialPrompts[studyType],
+        }
+      ],
+      timeline_variables: getTimelineVars(subjectNo, 1, 4, true),
+      randomize_order: true,
+    }
+    timeline.push(block1);
 
 
     var debriefing = {
