@@ -99,15 +99,17 @@ init().then((studyType) => {
       type: "instructions",
       pages: [
         '<h3>Welcome!</h3> ' +
-        'We are investigating the perception of musical vibrato. ' +
-        'Before we begin, we need to know if you are the right participant for this experiment.',
+        '<p>To navigate these text prompts, you may click the "Next" and "Previous" buttons below.</p>' +
+        '<p>Alternately, you can use your keyboard left-arrow and right-arrow to step through the prompts.</p>',
+        '<p> We are investigating the perception of musical vibrato. ' +
+        'Before we begin, we need to know if you are the right participant for this experiment. </p><br>' + 
         '<h3>Are you the right participant for us?</h3>' +
-        'Anyone can participate in this experiment so long as they have normal hearing.',
+        '<p>Anyone can participate in this experiment so long as they have normal hearing.</p><br>' + 
         '<h3>Please ensure you have the following before participating:</h3>' +
         '<ul><li>You are currently using a laptop or desktop computer and not using a mobile device.</li>'+
         '<li>You are using a current web browser with Javascript enabled (Chrome/Firefox are preferred).</li>'+
         '<li>You have a set of headphones to use during the experiment (do not use your speakers).</li>'+
-        '<li>You are participating in a quiet environment with very little background noise.</li></ul><br><br>' +
+        '<li>You are participating in a quiet environment with very little background noise.</li></ul><br>' +
         'If you have ensured the above and would like to participate in the study, please proceed to the informed consent form.'
       ],
       show_clickable_nav: true
@@ -128,11 +130,11 @@ init().then((studyType) => {
       type: "instructions",
       pages: [
         '<h3>Setting your system volume</h3>' +
-        'You will now hear six sounds that are typical of the sounds in this experiment. ' +
-        'They have been pre-adjusted to be approximately the same loudness.',
-        'As you listen to the sounds, adjust your system volume so that they are playing back to you at a comfortable level.',
-        'After you have set your volume, please <b> do not adjust your system volume for the rest of the experiment </b>.',
-        'Click Next to start listening.'
+        '<p>You will now hear six sounds that are typical of the sounds in this experiment. </p>' +
+        '<p>They have been pre-adjusted to be approximately the same loudness.</p>',
+        '<p>As you listen to the sounds, adjust your system volume so that they are playing back to you at a comfortable level.</p>' +
+        '<p>After you have set your volume, please <b> do not adjust your system volume for the rest of the experiment </b>.</p>' +
+        '<p>Click Next to start listening.</p>'
       ],
       show_clickable_nav: true
     };
@@ -159,19 +161,19 @@ init().then((studyType) => {
       var instructions = {
         type: "instructions",
         pages: [
-          "Thank you.",
-          "In this experiment you will rate a series of short sounds, one at a time. " +
+          "<p>Thank you.</p>" +
+          "<p>In this experiment you will rate a series of short sounds, one at a time. </p>" +
           "You will rate each sound on a scale from <b>less fused</b> to <b>more fused</b>.",
           "<h3>What does fused mean?</h3>" +
-          "All sound is made up of many simple components. Oftentimes they seem to be 'fused' together. ",
+          "<p>All sound is made up of many simple components. Oftentimes they seem to be 'fused' together.</p>" +
           "<p>Components that are <b>fused</b> make a sound that we hear as coming from one source.</p> " +
           "<p>For example, the sound of a violin is made up of many <b>fused</b> components, but we hear it as one source.</p>",
-          "Components that are <b>not fused</b> make a sound that seems cloudy, or coming from multiple sources at once.",
+          "<p>Components that are <b>not fused</b> make a sound that seems cloudy, or coming from multiple sources at once.</p>" +
           "<p>To help remind you of their meaning, the scale has additional labels in brackets: </p>" +
           "<p><b>less fused (more sources)</b> and <b>more fused (less sources)</b>.</p>",
-          "This short experiment takes place over two blocks. In each block you will hear and then rate 44 short sounds. ",
-          "Drag the slider to indicate your desired response. It can be placed at any point between the two extremes. ",
-          "You must click on the slider at least once to record your answer. When you are done, click 'Continue' to move on to the next trial.",
+          "<p>This short experiment takes place over two blocks. In each block you will hear and then rate 44 short sounds.</p>" +
+          "<p>Drag the slider to indicate your desired response. It can be placed at any point between the two extremes.</p>" +
+          "<p>You must click on the slider at least once to record your answer. When you are done, click 'Continue' to move on to the next trial.</p>",
           "We will now proceed to the practice block.",
         ],
         show_clickable_nav: true
@@ -182,19 +184,19 @@ init().then((studyType) => {
         type: "instructions",
         pages: [
           "Thank you.",
-          "In this experiment you will rate a series of short sounds, one at a time. " +
-          "For each sound you will rate the perceived vibrato on a scale from <b>not realistic at all</b> to <b>very realistic</b>.",
+          "<p>In this experiment you will rate a series of short sounds, one at a time. </p>" +
+          "<p>For each sound you will rate the perceived vibrato on a scale from <b>not realistic at all</b> to <b>very realistic</b>.</p><br>" +
           "<h3>What is vibrato?</h3>" +
-          "Vibrato is a smooth, cyclic variation of sound that performers use to add expression to musical notes. ",
+          "<p>Vibrato is a smooth, cyclic variation of sound that performers use to add expression to musical notes. </p>" +
           "<p>Opera singers are well-known for their wide pitch vibrato.</p> " +
           "<p>However, vibrato does not have to be a variation of pitch. Some kinds of instrument vibrato have very little change in pitch at all.</p>",
           "<p>You are about to hear sounds that have varying kinds of 'cyclic change.'</p>" +
-          "<p>We want to know which kinds of change sound like vibrato to you.</p>",
-          "To help remind you of the task, the scale has the following labels: " +
-          "<p><b>not realistic at all</b> to <b>very realistic</b>.</p>",
-          "Drag the slider to indicate your desired response. It can be placed at any point between the two extremes. ",
-          "You must click on the slider at least once to record your answer. When you are done, click 'Continue' to move on to the next trial.",
-          "This short experiment takes place over two blocks. In each block you will hear and then rate 44 short sounds. ",
+          "<p>We want to know which kinds of change sound like vibrato to you.</p><br>" +
+          "<p>To help remind you of the task, the scale has the following labels: </p>" +
+          "<p><b>not realistic at all</b> to <b>very realistic</b>.</p>" +
+          "<p>Drag the slider to indicate your desired response. It can be placed at any point between the two extremes.</p>",
+          "<p>You must click on the slider at least once to record your answer. When you are done, click 'Continue' to move on to the next trial.</p>" +
+          "<p>This short experiment takes place over two blocks. In each block you will hear and then rate 44 short sounds. </p>",
           "We will now proceed to the practice block.",
         ],
         show_clickable_nav: true
@@ -225,9 +227,9 @@ init().then((studyType) => {
     var preMain = {
       type: "instructions",
       pages: [
-        "We will now proceed to the main experiment.",
-        "At the end of the last block, you will be redirected to Prolific.",
-        "Thank you for your participation."
+        "<p>We will now proceed to the main experiment.</p>" +
+        "<p>At the end of the last block, you will be redirected to Prolific.</p>" +
+        "<p>Thank you for your participation.</p>"
       ],
       show_clickable_nav: true
     };
@@ -303,13 +305,13 @@ init().then((studyType) => {
     var debriefing = {
       type: 'instructions',
       pages: [
-        'Thank you, the experiment is now complete.',
+        '<p>Thank you, the experiment is now complete.</p><br>' + 
         '<h3>What are we studying?</h3>' +
-        '<p>We are studying vibrato, and what conditions are necessary to hear it in simple synthetic stimuli.</p>',
+        '<p>We are studying vibrato, and what conditions are necessary to hear it in simple synthetic stimuli.</p>' + 
         '<p>The sounds that you just heard are based on a real sample of cello vibrato.</p>' +
-        '<p>Each kind of stimulus is degraded in a particular way.</p>' +
-        '<p>We are trying to see which particular degredations destroy the effect of vibrato.</p>',
-        '<p>From our preliminary explorations, it seems like vibrato comes through when the partials of the signal have a common "amplitude modulation rate".</p>',
+        '<p>Each kind of stimulus is degraded in a particular way.</p>',
+        '<p>We are trying to see which particular degredations destroy the effect of vibrato.</p>' +
+        '<p>From our preliminary explorations, it seems like vibrato comes through when the partials of the signal have a common "amplitude modulation rate."</p>' +
         '<p>That means that when all of the sound components are moving together in volume, you may be more likely to hear a fused vibrato sound.</p>' +
         '<p>If you are interested in this subject, you are welcome to contact us <a href="mailto:max.henry@mail.mcgill.ca">here</a> with questions. </p>',
         'This concludes the study. Thank you. You will now be returned to Prolific.',
