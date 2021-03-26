@@ -43,7 +43,7 @@ init().then((studyType) => {
   ];
 
   var trialLabels = [
-    ["less fused (more sources)", "more fused (less sources)"],
+    ["greater multiplicity (more sources)", "greater unity (less sources)"],
     ["not realistic at all", "very realistic"],
   ];
 
@@ -163,14 +163,14 @@ init().then((studyType) => {
         pages: [
           "<p>Thank you.</p>" +
           "<p>In this experiment you will rate a series of short sounds, one at a time. </p>" +
-          "You will rate each sound on a scale from <b>less fused</b> to <b>more fused</b>.",
+          "You will rate each sound by how <b>fused</b> it is, on a scale from <b>greater multiplicity</b> to <b>greater unity</b>.",
           "<h3>What does fused mean?</h3>" +
           "<p>All sound is made up of many simple components. Oftentimes they seem to be 'fused' together.</p>" +
-          "<p>Components that are <b>fused</b> make a sound that we hear as coming from one source.</p> " +
-          "<p>For example, the sound of a violin is made up of many <b>fused</b> components, but we hear it as one source.</p>",
-          "<p>Components that are <b>not fused</b> make a sound that seems cloudy, or coming from multiple sources at once.</p>" +
+          "<p>Components that are fused make a sound that we hear as coming from one source, or having a sense of <b>unity</b>.</p> " +
+          "<p>For example, the sound of a violin is made up of many fused components, but we hear it as one source.</p>",
+          "<p>Components that are not fused make a sound that seems cloudy, or coming from multiple sources at once. Such sounds have a sense of <b>multiplicity</b>.</p>" +
           "<p>To help remind you of their meaning, the scale has additional labels in brackets: </p>" +
-          "<p><b>less fused (more sources)</b> and <b>more fused (less sources)</b>.</p>",
+          "<p><b>greater multiplicity (more sources)</b> and <b>greater unity (less sources)</b>.</p>",
           "<p>This short experiment takes place over two blocks. In each block you will hear and then rate 44 short sounds.</p>" +
           "<p>Drag the slider to indicate your desired response. It can be placed at any point between the two extremes.</p>" +
           "<p>You must click on the slider at least once to record your answer. When you are done, click 'Continue' to move on to the next trial.</p>",
