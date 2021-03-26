@@ -163,7 +163,7 @@ init().then((studyType) => {
         pages: [
           "<p>Thank you.</p>" +
           "<p>In this experiment you will rate a series of short sounds, one at a time. </p>" +
-          "You will rate each sound by how 'fused' it is, scale from <b>greater multiplicity</b> to <b>greater unity</b>.",
+          "You will rate each sound by how <b>fused</b> it is, on a scale from <b>greater multiplicity</b> to <b>greater unity</b>.",
           "<h3>What does fused mean?</h3>" +
           "<p>All sound is made up of many simple components. Oftentimes they seem to be 'fused' together.</p>" +
           "<p>Components that are fused make a sound that we hear as coming from one source, or having a sense of <b>unity</b>.</p> " +
