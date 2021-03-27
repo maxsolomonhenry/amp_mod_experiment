@@ -56,10 +56,12 @@ init().then((studyType) => {
 
     subjectNo = count;
 
-    if (subjectNo > 99) {
-      document.getElementById("prompt").innerHTML = "Maximum number of participants reached. Please check back later.";
-      return;
-    }
+	/*
+		if (subjectNo > 99) {
+		  document.getElementById("prompt").innerHTML = "Maximum number of participants reached. Please check back later.";
+		  return;
+		}
+	*/
 
 
     audio = audio.concat(getTimelineVars(subjectNo, 0, 4, false));
@@ -343,7 +345,7 @@ init().then((studyType) => {
             // Send to server, and download data.
             socket.emit('csv', {filename: filename, expData: expData}, function(confirmation){ 
               console.log(confirmation);
-              window.location = "https://app.prolific.co/submissions/complete?cc=6AD744E4"; // TODO
+              window.location = "https://app.prolific.co/submissions/complete?cc=483CA773"; // TYPE=0 experiment.
             });
 
 
