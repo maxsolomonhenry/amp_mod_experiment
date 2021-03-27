@@ -21,6 +21,14 @@ io.on('connection', newConnection);
 var datapath = 'data/';
 var subjectCount = 0;
 
+var tmp = process.argv[2];
+
+if (typeof tmp !== 'undefined'){
+    subjectCount = parseInt(process.argv[2]);
+}
+
+console.log(`Starting at subject number ${subjectCount}...`);
+
 function newConnection(socket){
     console.log('new connection: ' + socket.id);
 
